@@ -1,0 +1,19 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+.font-serif-display { font-family: 'Playfair Display', 'Cinzel', serif; }
+.font-cinzel { font-family: 'Cinzel', serif; }
+.gold-gradient {
+  background: linear-gradient(100deg, #E8C99A 0%, #C9A86A 45%, #8C6B3D 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.batik {
+  background-image: radial-gradient(circle at 1px 1px, rgba(201,168,106,0.12) 1px, transparent 0);
+  background-size: 32px 32px;
+}
+.reveal { opacity: 1; transform: none; transition: all 0.8s ease; }
+/* Fix J clipping */
+.hero-title { overflow: visible; padding-left: 0.25rem; line-height: 1.05; }
+.hero-jowo { display: inline-block; overflow: visible; padding: 0 0.5rem 0.24em 0.25rem; line-height: 1.15; position: relative; left: 1px; }
+.logo-wayang { mix-blend-mode: multiply; opacity: 0.22; }
