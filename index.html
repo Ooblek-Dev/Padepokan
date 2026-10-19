@@ -1,144 +1,312 @@
 <!DOCTYPE html>
-<html lang="id">
-<head>
+<html lang="id" data-theme="dark">
+<head><style>
+@font-face {
+  font-family: "Optimistic";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Optimistic Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/OptimisticMono_W_TextRegular.woff2") format("woff2");
+}
+:where(html) {
+  font-family: "Optimistic", system-ui, sans-serif;
+}
+:where(code, pre, kbd, samp) {
+  font-family: "Optimistic Mono", ui-monospace, monospace;
+}
+</style>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Padepokan Raden Mbeling - Prambon Sidoarjo | Agomo Diterimo, Jowo Digowo</title>
-<meta name="description" content="Padepokan Raden Mbeling di Prambon Sidoarjo - Rumah budaya Nguri-uri Sejarah & Budaya Tanah Jawa. Agomo Diterimo, Jowo Digowo.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23C9A86A'/><text x='50%' y='58%' dominant-baseline='middle' text-anchor='middle' font-family='serif' font-weight='700' font-size='48' fill='%230A0A0B'>RM</text></svg>">
+<meta name="description" content="Padepokan Raden Mbeling - Rumah budaya di Prambon Sidoarjo. Agomo Diterimo, Jowo Digowo. Dokumentasi makam keramat, sejarah wali, mitos Nusantara.">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="style.css">
 </head>
-<body class="min-h-screen bg-[#0A0A0B] text-[#E8E6E1] antialiased selection:bg-[#C9A86A]/30">
+<body>
 
-<header class="sticky top-0 z-50 w-full border-b border-white/[0.06] bg-transparent transition-all duration-500">
+<header class="sticky top-0 z-50 w-full border-b bg-[var(--bg)]/80 backdrop-blur-2xl" style="border-color: var(--border);">
   <div class="mx-auto max-w-[1280px] px-6 md:px-10 h-[72px] flex items-center justify-between">
-    <a href="#beranda" class="flex items-center gap-3">
-      <div class="relative w-9 h-9 rounded-[10px] bg-gradient-to-br from-[#C9A86A] to-[#8C6B3D] flex items-center justify-center overflow-hidden shadow-[0_0_20px_rgba(201,168,106,0.25)]">
-        <img src="assets/wayang-gunungan.webp" alt="Wayang Gunungan" class="absolute inset-0 w-full h-full object-cover logo-wayang scale-[1.15]">
-        <div class="absolute inset-0 bg-gradient-to-br from-[#C9A86A]/80 to-[#8C6B3D]/90"></div>
-        <span class="relative z-10 font-cinzel font-bold text-[15px] text-[#0A0A0B]">RM</span>
+    <a href="#beranda" class="flex items-center gap-3 group">
+      <div class="relative w-9 h-9 rounded-[10px] bg-[var(--gold-gradient)] flex items-center justify-center shadow-[var(--gold-glow)] group-hover:shadow-[0_0_28px_rgba(201,168,106,0.45)] transition-all duration-500">
+        <span class="font-cinzel font-bold text-[15px] text-[#0A0A0B]">RM</span>
       </div>
       <div class="leading-[1.1]">
-        <div class="font-serif-display font-semibold text-[15px]">Padepokan Raden Mbeling</div>
-        <div class="font-cinzel text-[9px] tracking-[0.18em] text-[#C9A86A]/80 uppercase mt-[1px]">Prambon • Sidoarjo</div>
+        <div class="font-serif font-semibold text-[15px] tracking-[-0.01em]">Padepokan Raden Mbeling</div>
+        <div class="font-cinzel text-[9px] tracking-[0.18em] text-[var(--gold)]/80 uppercase mt-[2px]">Prambon • Sidoarjo</div>
       </div>
     </a>
     <nav class="hidden lg:flex items-center gap-8">
-      <a href="#beranda" class="text-[13px] text-white/60 hover:text-white">Beranda</a>
-      <a href="#tentang" class="text-[13px] text-white/60 hover:text-white">Tentang</a>
-      <a href="#kegiatan" class="text-[13px] text-white/60 hover:text-white">Kegiatan</a>
-      <a href="#karya" class="text-[13px] text-white/60 hover:text-white">Karya</a>
-      <a href="#lokasi" class="text-[13px] text-white/60 hover:text-white">Lokasi</a>
-      <a href="#kontak" class="text-[13px] text-white/60 hover:text-white">Kontak</a>
+      <a href="#beranda" class="text-[13px] text-[var(--text-muted)] hover:text-[var(--text)] transition">Beranda</a>
+      <a href="#tentang" class="text-[13px] text-[var(--text-muted)] hover:text-[var(--text)] transition">Tentang</a>
+      <a href="#kegiatan" class="text-[13px] text-[var(--text-muted)] hover:text-[var(--text)] transition">Kegiatan</a>
+      <a href="#karya" class="text-[13px] text-[var(--text-muted)] hover:text-[var(--text)] transition">Karya</a>
+      <a href="#lokasi" class="text-[13px] text-[var(--text-muted)] hover:text-[var(--text)] transition">Lokasi</a>
+      <a href="#kontak" class="text-[13px] text-[var(--text-muted)] hover:text-[var(--text)] transition">Kontak</a>
     </nav>
     <div class="flex items-center gap-3">
-      <a href="https://wa.me/6281554424198?text=Assalamualaikum%20Padepokan%20Raden%20Mbeling" target="_blank" class="hidden md:inline-flex h-9 px-5 rounded-full bg-[#C9A86A] text-[#0A0A0B] text-[13px] font-semibold items-center gap-2 hover:bg-[#E8C99A]">Hubungi Padepokan</a>
-      <button id="mobileBtn" class="lg:hidden w-9 h-9 rounded-full bg-white/[0.06] border border-white/[0.08] flex items-center justify-center">☰</button>
+      <button id="themeToggle" class="theme-toggle" aria-label="Ganti tema pagi/malam"><span class="knob">☀️</span></button>
+      <a href="https://wa.me/6281554424198?text=Assalamualaikum%20Padepokan%20Raden%20Mbeling" target="_blank" class="hidden md:inline-flex h-9 px-5 rounded-full bg-[var(--gold)] text-[#0A0A0B] text-[13px] font-semibold items-center gap-2 hover:brightness-110 transition">Hubungi</a>
+      <button id="mobileBtn" class="lg:hidden w-9 h-9 rounded-full bg-[var(--card)] border flex items-center justify-center" style="border-color: var(--card-border);">☰</button>
     </div>
   </div>
-  <div id="mobileMenu" class="hidden lg:hidden absolute top-[72px] left-0 w-full bg-[#151517]/95 backdrop-blur-2xl border-b border-white/[0.06] px-6 py-6">
-    <a href="#beranda" class="block py-3 text-[15px] text-white/70 border-b border-white/[0.04]">Beranda</a>
-    <a href="#tentang" class="block py-3 text-[15px] text-white/70 border-b border-white/[0.04]">Tentang</a>
-    <a href="#kegiatan" class="block py-3 text-[15px] text-white/70 border-b border-white/[0.04]">Kegiatan</a>
-    <a href="#karya" class="block py-3 text-[15px] text-white/70 border-b border-white/[0.04]">Karya</a>
-    <a href="#lokasi" class="block py-3 text-[15px] text-white/70 border-b border-white/[0.04]">Lokasi</a>
-    <a href="#kontak" class="block py-3 text-[15px] text-white/70">Kontak</a>
+  <div id="mobileMenu" class="hidden lg:hidden absolute top-[72px] left-0 w-full bg-[var(--card)]/95 backdrop-blur-2xl border-b px-6 py-6 flex flex-col gap-1" style="border-color: var(--border);">
+    <a href="#beranda" class="py-3 text-[15px] text-[var(--text-muted)] border-b" style="border-color: var(--border);">Beranda</a>
+    <a href="#tentang" class="py-3 text-[15px] text-[var(--text-muted)] border-b" style="border-color: var(--border);">Tentang</a>
+    <a href="#kegiatan" class="py-3 text-[15px] text-[var(--text-muted)] border-b" style="border-color: var(--border);">Kegiatan</a>
+    <a href="#karya" class="py-3 text-[15px] text-[var(--text-muted)] border-b" style="border-color: var(--border);">Karya</a>
+    <a href="#lokasi" class="py-3 text-[15px] text-[var(--text-muted)] border-b" style="border-color: var(--border);">Lokasi</a>
+    <a href="#kontak" class="py-3 text-[15px] text-[var(--text-muted)]">Kontak</a>
   </div>
 </header>
 
-<section id="beranda" class="relative mx-auto max-w-[1280px] px-6 md:px-10 pt-12 md:pt-20 pb-20 md:pb-28 overflow-visible">
+<section id="beranda" class="relative mx-auto max-w-[1280px] px-6 md:px-10 pt-14 md:pt-24 pb-20 overflow-visible">
   <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-    <div class="absolute -top-32 -left-16 w-[600px] h-[600px] rounded-full bg-[#C9A86A]/[0.08] blur-[120px]"></div>
-    <div class="absolute top-20 -right-16 w-[500px] h-[500px] rounded-full bg-[#7A1C1C]/[0.12] blur-[120px]"></div>
-    <div class="absolute inset-0 batik opacity-40"></div>
+    <div class="float-blob absolute -top-32 -left-20 w-[600px] h-[600px] rounded-full blur-[120px]" style="background: var(--bg-glow-1);"></div>
+    <div class="float-blob-2 absolute top-20 -right-20 w-[500px] h-[500px] rounded-full blur-[120px]" style="background: var(--bg-glow-2);"></div>
+    <div class="absolute inset-0 batik"></div>
   </div>
+
   <div class="grid lg:grid-cols-[1.15fr_0.85fr] gap-12 items-center overflow-visible">
-    <div class="overflow-visible">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.06] text-[11px] tracking-[0.12em] uppercase text-[#C9A86A]/90 mb-8"><span class="w-1.5 h-1.5 rounded-full bg-[#C9A86A]"></span> Kebenaran Hanya Milik Allah SWT</div>
-      <h1 class="hero-title font-serif-display font-[800] text-[40px] md:text-[62px] lg:text-[68px]">
-        <span class="block text-[#E8E6E1] overflow-visible">Agomo Diterimo,</span>
-        <span class="hero-jowo gold-gradient italic font-[600]">Jowo Digowo</span>
+    <div class="reveal overflow-visible">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[var(--card)] border text-[11px] tracking-[0.12em] uppercase font-medium" style="border-color: var(--card-border); color: var(--gold);">
+        <span class="w-1.5 h-1.5 rounded-full bg-[var(--gold)] animate-pulse"></span> Kebenaran Hanya Milik Allah SWT
+      </div>
+      <h1 class="hero-title mt-8 font-serif font-[800] text-[44px] md:text-[66px] lg:text-[74px] tracking-[-0.03em] text-[var(--text)]">
+        <span class="block overflow-visible">Agomo Diterimo,</span>
+        <span class="hero-jowo gold-gradient italic font-[700]">Jowo Digowo</span>
       </h1>
-      <div class="mt-4 font-serif-display text-[18px] md:text-[20px] text-[#E8E6E1]/80">Laku Budaya, Nguri-uri Sejarah Leluhur</div>
-      <p class="mt-6 max-w-[560px] text-[16px] md:text-[18px] leading-[1.7] text-white/60 font-light">Padepokan Raden Mbeling adalah rumah budaya di Prambon Sidoarjo — pusat edukasi sejarah, spiritual, dan kearifan lokal Jawa. Melestarikan kisah makam keramat, wali, dan mitos Nusantara dengan pendekatan edukatif dan beradab.</p>
+      <div class="mt-5 font-serif text-[19px] md:text-[22px] leading-[1.4] text-[var(--text-muted)]">Laku Budaya, Nguri-uri Sejarah Leluhur</div>
+      <p class="mt-6 max-w-[560px] text-[16px] md:text-[18px] leading-[1.7] text-[var(--text-muted)] font-light">Padepokan Raden Mbeling adalah rumah budaya di Prambon Sidoarjo — pusat edukasi sejarah, spiritual, dan kearifan lokal Jawa. Melestarikan kisah makam keramat, wali, dan mitos Nusantara dengan pendekatan edukatif dan beradab.</p>
       <div class="mt-8 flex flex-wrap gap-3">
-        <a href="#tentang" class="h-[48px] px-7 rounded-full bg-[#E8E6E1] text-[#0A0A0B] text-[14px] font-semibold inline-flex items-center gap-2">Jelajahi Kisah →</a>
-        <a href="https://www.youtube.com/@mbchannel_radenmbeling9454" target="_blank" class="h-[48px] px-7 rounded-full bg-white/[0.06] border border-white/[0.10] text-[14px] font-medium inline-flex items-center gap-2">▶ Tonton Channel</a>
+        <a href="#karya" class="btn-shine h-[50px] px-8 rounded-full bg-[var(--text)] text-[var(--bg)] text-[14px] font-semibold inline-flex items-center gap-2 hover:scale-[1.02] transition-transform">Jelajahi Kisah →</a>
+        <a href="https://www.youtube.com/@mbchannel_radenmbeling9454" target="_blank" class="h-[50px] px-8 rounded-full bg-[var(--card)] border text-[14px] font-medium inline-flex items-center gap-2 hover:bg-[var(--card-hover)] transition" style="border-color: var(--card-border);">▶ Tonton Channel</a>
+      </div>
+      <div class="mt-12 flex items-center gap-4 pt-6 border-t" style="border-color: var(--border);">
+        <div class="flex -space-x-2"><div class="w-8 h-8 rounded-full bg-[var(--card)] border flex items-center justify-center text-[10px] font-cinzel text-[var(--gold)]" style="border-color: var(--bg);">RM</div><div class="w-8 h-8 rounded-full bg-[var(--card)] border flex items-center justify-center text-[10px] font-cinzel text-[var(--gold)]" style="border-color: var(--bg);">RM</div><div class="w-8 h-8 rounded-full bg-[var(--gold)] border flex items-center justify-center text-[10px] font-bold text-[#0A0A0B]" style="border-color: var(--bg);">+50</div></div>
+        <div class="text-[13px] leading-[1.4] text-[var(--text-muted)]">Dipercaya peziarah & penikmat sejarah dari berbagai daerah di Jawa Timur</div>
       </div>
     </div>
-    <div class="lg:pl-8">
-      <div class="relative rounded-[24px] bg-[#151517] border border-white/[0.06] p-6 md:p-7">
-        <div class="flex items-center gap-3 mb-6"><div class="w-12 h-12 rounded-[14px] bg-gradient-to-br from-[#C9A86A] to-[#7A1C1C] flex items-center justify-center">▶</div><div><div class="font-serif-display font-semibold">MB Channel</div><div class="text-[12px] text-white/50">Raden Mbeling • YouTube</div></div></div>
-        <div class="rounded-[16px] bg-[#0A0A0B] border border-white/[0.04] p-4 flex justify-between mb-4">
-          <div><div class="text-[11px] uppercase text-white/40">Subscriber</div><div class="font-serif-display text-[24px] font-bold mt-1">2.06rb</div></div>
-          <div><div class="text-[11px] uppercase text-white/40">Video</div><div class="font-serif-display text-[24px] font-bold mt-1">150+</div></div>
-          <div><div class="text-[11px] uppercase text-white/40">Rating</div><div class="mt-1 font-semibold">★ 4.9</div></div>
+
+    <div class="reveal reveal-delay-1 lg:pl-8">
+      <div class="relative rounded-[24px] bg-[var(--card)] border p-[1px] shadow-[var(--card-shadow)]" style="border-color: var(--card-border);">
+        <div class="rounded-[23px] bg-[var(--card)] p-6 md:p-7">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 rounded-[14px] flex items-center justify-center" style="background: var(--gold-gradient);">▶</div>
+            <div><div class="font-serif font-semibold text-[16px]">MB Channel</div><div class="text-[12px] text-[var(--text-muted)]">Raden Mbeling • YouTube</div></div>
+            <div class="ml-auto px-2.5 py-1 rounded-full text-[10px] tracking-[0.08em] font-semibold" style="background: rgba(201,168,106,0.12); color: var(--gold); border:1px solid rgba(201,168,106,0.2);">LIVE</div>
+          </div>
+          <div class="rounded-[16px] p-4 flex justify-between mb-4" style="background: var(--bg-soft); border:1px solid var(--border);">
+            <div><div class="text-[11px] uppercase tracking-[0.08em] text-[var(--text-muted)]">Subscriber</div><div class="font-serif text-[24px] font-bold mt-1">2.06rb</div></div>
+            <div><div class="text-[11px] uppercase text-[var(--text-muted)]">Video</div><div class="font-serif text-[24px] font-bold mt-1">150+</div></div>
+            <div><div class="text-[11px] uppercase text-[var(--text-muted)]">Rating</div><div class="mt-1 font-semibold flex items-center gap-1"><span style="color:var(--gold);">★</span> 4.9</div></div>
+          </div>
+          <div id="ytMiniPreview" class="space-y-3 mb-6">
+            <div class="rounded-[12px] p-3 flex gap-3 items-center" style="background: var(--bg); border:1px solid var(--border);">
+              <div class="w-16 h-10 rounded-[8px] flex items-center justify-center relative overflow-hidden" style="background: linear-gradient(135deg, #2A2520, #1A1A1D);"><span class="text-[var(--gold)]/60">▶</span><div class="absolute bottom-1 right-1 text-[8px] px-1 rounded bg-black/60 text-white">12:41</div></div>
+              <div class="flex-1 min-w-0"><div class="text-[13px] font-medium truncate">Kisah Makam Pangeran Samudro...</div><div class="text-[11px] text-[var(--text-muted)] mt-0.5">4.2k • 2 hari lalu</div></div>
+            </div>
+            <div class="rounded-[12px] p-3 flex gap-3 items-center" style="background: var(--bg); border:1px solid var(--border);">
+              <div class="w-16 h-10 rounded-[8px] flex items-center justify-center" style="background: linear-gradient(135deg, #1F1A16, #151517);"><span class="text-[var(--gold)]/60">▶</span></div>
+              <div class="flex-1 min-w-0"><div class="text-[13px] font-medium truncate">Mbah Slagah Pasuruan - Macan Putih</div><div class="text-[11px] text-[var(--text-muted)] mt-0.5">3.8k • 5 hari lalu</div></div>
+            </div>
+          </div>
+          <a href="https://www.youtube.com/@mbchannel_radenmbeling9454" target="_blank" class="w-full h-11 rounded-full bg-[var(--text)] text-[var(--bg)] text-[13px] font-semibold flex items-center justify-center gap-2 hover:opacity-90 transition">Kunjungi YouTube Channel</a>
         </div>
-        <a href="https://www.youtube.com/@mbchannel_radenmbeling9454" target="_blank" class="w-full h-11 rounded-full bg-white text-black text-[13px] font-semibold flex items-center justify-center">Kunjungi YouTube Channel</a>
       </div>
     </div>
   </div>
 </section>
 
-<section id="tentang" class="border-t border-white/[0.06] bg-[#0F0F11] py-20 md:py-28">
+<div class="marquee py-1 bg-[var(--bg-soft)]/50">
+  <div class="marquee-track">
+    <span class="marquee-item">Makam Keramat •</span><span class="marquee-item">Sejarah Wali •</span><span class="marquee-item">Mitos Nusantara •</span><span class="marquee-item">Ziarah •</span><span class="marquee-item">Babad Tanah Jawa •</span><span class="marquee-item">Kearifan Lokal •</span>
+    <span class="marquee-item">Makam Keramat •</span><span class="marquee-item">Sejarah Wali •</span><span class="marquee-item">Mitos Nusantara •</span><span class="marquee-item">Ziarah •</span><span class="marquee-item">Babad Tanah Jawa •</span><span class="marquee-item">Kearifan Lokal •</span>
+  </div>
+</div>
+
+<section id="tentang" class="relative border-t py-20 md:py-28" style="border-color: var(--border); background: var(--bg-soft);">
   <div class="mx-auto max-w-[1280px] px-6 md:px-10 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-20">
-    <div>
-      <div class="font-cinzel text-[11px] tracking-[0.2em] text-[#C9A86A] uppercase mb-4">Tentang Padepokan</div>
-      <h2 class="font-serif-display text-[32px] md:text-[44px] lg:text-[48px] leading-[1.05] font-bold">Rumah budaya untuk <span class="italic gold-gradient">merawat ingatan</span> kolektif tanah Jawa.</h2>
-      <p class="mt-6 text-[14px] leading-[1.8] text-white/50">Berdiri di jantung Prambon, Sidoarjo — kami bukan sekadar paguyuban spiritual, melainkan laboratorium sejarah hidup.</p>
+    <div class="reveal">
+      <div class="font-cinzel text-[11px] tracking-[0.2em] uppercase mb-4" style="color: var(--gold);">Tentang Padepokan</div>
+      <h2 class="font-serif text-[32px] md:text-[44px] lg:text-[48px] leading-[1.05] font-bold tracking-[-0.02em] text-[var(--text)]">Rumah budaya untuk <span class="italic gold-gradient">merawat ingatan</span> kolektif tanah Jawa.</h2>
+      <div class="mt-8 w-full h-px" style="background: linear-gradient(90deg, var(--gold)/40, var(--border), transparent);"></div>
+      <p class="mt-6 text-[14px] leading-[1.8] text-[var(--text-muted)]">Berdiri di jantung Prambon, Sidoarjo — kami bukan sekadar paguyuban spiritual, melainkan laboratorium sejarah hidup.</p>
     </div>
-    <div class="space-y-10">
+    <div class="reveal reveal-delay-1 space-y-10">
       <div class="text-center">
-        <p class="text-[17px] leading-[1.7] text-white/80 font-light mx-auto max-w-[640px]"><span class="text-white font-medium">Padepokan Raden Mbeling</span> adalah rumah budaya yang didirikan di Prambon Sidoarjo untuk melestarikan cerita-cerita makam keramat, sejarah wali, dan kearifan lokal yang hampir hilang ditelan zaman modern.</p>
-        <p class="mt-4 text-[15px] leading-[1.8] text-white/50 mx-auto max-w-[640px]">Nama "Mbeling" bukan berarti nakal tanpa arah. Filosofi kami: berani beda, blak-blakan tapi tetap beradab. Kami menyampaikan kebenaran sejarah apa adanya — tanpa ditutup-tutupi, tanpa dibumbui mistik berlebihan. Mistis yang kami rawat adalah mistis edukatif: jembatan antara nalar dan rasa, antara data babad dan laku spiritual.</p>
+        <p class="text-[17px] leading-[1.7] text-[var(--text)]/80 font-light mx-auto max-w-[640px]"><span class="text-[var(--text)] font-medium">Padepokan Raden Mbeling</span> adalah rumah budaya yang didirikan di Prambon Sidoarjo untuk melestarikan cerita-cerita makam keramat, sejarah wali, dan kearifan lokal yang hampir hilang ditelan zaman modern.</p>
+        <p class="mt-4 text-[15px] leading-[1.8] text-[var(--text-muted)] mx-auto max-w-[640px]">Nama "Mbeling" bukan berarti nakal tanpa arah. Filosofi kami: berani beda, blak-blakan tapi tetap beradab. Kami menyampaikan kebenaran sejarah apa adanya — tanpa ditutup-tutupi, tanpa dibumbui mistik berlebihan. Mistis yang kami rawat adalah mistis edukatif: jembatan antara nalar dan rasa.</p>
       </div>
-      <div class="rounded-[20px] bg-[#151517] border border-white/[0.06] p-6 grid md:grid-cols-2 gap-6">
-        <div><div class="text-[13px] font-semibold">📜 Napak Tilas</div><ul class="mt-4 space-y-2 text-[13px] text-white/60"><li>• Ziarah makam wali & leluhur se-Jatim & Jateng</li><li>• Dokumentasi lapangan & wawancara juru kunci</li><li>• Ngaji sejarah terbuka di padepokan</li></ul></div>
-        <div class="rounded-[14px] bg-[#0A0A0B] border border-white/[0.04] p-4"><div class="text-[11px] uppercase text-white/30">Makna Mbeling Lengkap</div><div class="mt-3 space-y-2 text-[12px]"><div><span class="text-[#C9A86A]">M</span> - Menguri-uri Sejarah, Mengabdi pada Kebenaran</div><div><span class="text-[#C9A86A]">B</span> - Berani menyampaikan fakta sejarah</div><div><span class="text-[#C9A86A]">E</span> - Edukasi, bukan eksploitasi mistis</div><div><span class="text-[#C9A86A]">L</span> - Laku budaya</div><div><span class="text-[#C9A86A]">I</span> - Integritas pada sumber</div><div><span class="text-[#C9A86A]">N</span> - Ngalap berkah dengan adab</div><div><span class="text-[#C9A86A]">G</span> - Gotong royong merawat warisan</div></div></div>
+      <div class="rounded-[20px] bg-[var(--card)] border p-6 grid md:grid-cols-2 gap-6 shadow-[var(--card-shadow)]" style="border-color: var(--card-border);">
+        <div><div class="text-[13px] font-semibold">📜 Napak Tilas</div><ul class="mt-4 space-y-2 text-[13px] text-[var(--text-muted)]"><li>• Ziarah makam wali & leluhur se-Jatim & Jateng</li><li>• Dokumentasi lapangan & wawancara juru kunci</li><li>• Ngaji sejarah terbuka di padepokan</li></ul></div>
+        <div class="rounded-[14px] p-4" style="background: var(--bg); border:1px solid var(--border);"><div class="text-[11px] uppercase tracking-[0.1em] text-[var(--text-faint)]">Makna Mbeling Lengkap</div><div class="mt-3 space-y-2 text-[12px]"><div><b style="color:var(--gold);">M</b> - Menguri-uri Sejarah</div><div><b style="color:var(--gold);">B</b> - Berani menyampaikan fakta</div><div><b style="color:var(--gold);">E</b> - Edukasi, bukan eksploitasi</div><div><b style="color:var(--gold);">L</b> - Laku budaya</div><div><b style="color:var(--gold);">I</b> - Integritas sumber</div><div><b style="color:var(--gold);">N</b> - Ngalap berkah dengan adab</div><div><b style="color:var(--gold);">G</b> - Gotong royong</div></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="lokasi" class="mx-auto max-w-[1280px] px-6 md:px-10 py-20 border-t border-white/[0.06]">
-  <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-10">
+<!-- KARYA - YT PREVIEW LIST VIVID -->
+<section id="karya" class="mx-auto max-w-[1280px] px-6 md:px-10 py-20 md:py-28">
+  <div class="flex flex-wrap items-end justify-between gap-6 mb-10 reveal">
     <div>
-      <div class="font-cinzel text-[11px] tracking-[0.2em] text-[#C9A86A] uppercase">Lokasi Padepokan</div>
-      <h2 class="mt-3 font-serif-display text-[34px] md:text-[44px] font-bold">Sowan langsung, pintu selalu terbuka.</h2>
-      <div class="mt-8 rounded-[20px] bg-[#151517] border border-white/[0.06] p-6">
-        <div class="text-[13px] uppercase text-white/40">Alamat Lengkap</div>
-        <div class="mt-2 text-[15px] font-medium leading-[1.6]">Jalan Brawijaya No. 01, Dusun Gedangpulut, Desa Gedangrowo, RT/RW 01/01, Kecamatan Prambon, Kabupaten Sidoarjo, Jawa Timur 61264</div>
-        <div class="mt-3 inline-flex px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/15 text-[11px] text-emerald-400">✓ Lokasi terverifikasi Google Maps</div>
-        <a href="https://maps.app.goo.gl/6sr8DqpPkG7nAzRv5" target="_blank" class="mt-6 h-11 rounded-full bg-[#C9A86A] text-[#0A0A0B] font-semibold flex items-center justify-center">Buka di Google Maps</a>
+      <div class="font-cinzel text-[11px] tracking-[0.2em] uppercase" style="color: var(--gold);">Dokumentasi Lapangan</div>
+      <h2 class="mt-3 font-serif text-[34px] md:text-[48px] leading-[0.9] font-bold tracking-[-0.02em]">150+ kisah yang <span class="gold-gradient italic">sudah hidup</span> di YouTube.</h2>
+      <p class="mt-4 text-[14px] text-[var(--text-muted)] max-w-[520px]">Tonton langsung napak tilas kami — dari Gunung Kemukus sampai Lakarsantri. Klik untuk nonton full di channel.</p>
+    </div>
+    <a href="https://www.youtube.com/@mbchannel_radenmbeling9454" target="_blank" class="hidden md:inline-flex h-10 px-5 rounded-full bg-[var(--card)] border text-[13px] font-medium items-center gap-2 hover:bg-[var(--card-hover)] transition" style="border-color: var(--card-border);">Lihat Semua di YouTube ↗</a>
+  </div>
+
+  <!-- YT GRID - Horizontal scroll on mobile, grid on desktop -->
+  <div id="ytTrack" class="flex lg:grid lg:grid-cols-3 gap-5 overflow-x-auto lg:overflow-visible pb-6 lg:pb-0 snap-x snap-mandatory scrollbar-none" style="scrollbar-width:none;">
+    <!-- Card 1 -->
+    <a href="https://www.youtube.com/@mbchannel_radenmbeling9454" target="_blank" class="yt-card group min-w-[300px] lg:min-w-0 snap-start rounded-[20px] bg-[var(--card)] border overflow-hidden card-hover" style="border-color: var(--card-border);">
+      <div class="relative aspect-[16/10] overflow-hidden bg-[var(--bg-soft)]">
+        <div class="thumb absolute inset-0 bg-gradient-to-br from-[#2A1F14] via-[#1E1A16] to-[#0A0A0B] flex items-center justify-center">
+          <div class="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center play shadow-[0_8px_32px_rgba(0,0,0,0.4)]">▶</div>
+        </div>
+        <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/70 text-white text-[10px] uppercase tracking-wide">Pesugihan</div>
+        <div class="absolute bottom-3 right-3 px-2 py-1 rounded-[8px] bg-black/70 text-white text-[11px]">12:41</div>
+        <div class="absolute inset-0 batik opacity-20"></div>
+      </div>
+      <div class="p-5">
+        <h3 class="font-serif text-[15px] font-semibold leading-[1.35] group-hover:text-[var(--gold)] transition">Kisah Makam Pangeran Samudro - Pesugihan Gunung Kemukus</h3>
+        <div class="mt-3 flex items-center gap-3 text-[11px] text-[var(--text-muted)]"><span>👁 4.2k views</span><span>•</span><span>2 hari lalu</span></div>
+        <div class="mt-4 text-[12px] font-medium text-[var(--text-muted)] group-hover:text-[var(--text)] transition flex items-center gap-1">Tonton sekarang <span>↗</span></div>
+      </div>
+    </a>
+    <!-- Card 2 -->
+    <a href="https://www.youtube.com/@mbchannel_radenmbeling9454" target="_blank" class="yt-card group min-w-[300px] lg:min-w-0 snap-start rounded-[20px] bg-[var(--card)] border overflow-hidden card-hover" style="border-color: var(--card-border);">
+      <div class="relative aspect-[16/10] overflow-hidden bg-[var(--bg-soft)]">
+        <div class="thumb absolute inset-0 bg-gradient-to-br from-[#1A251A] via-[#151A15] to-[#0A0A0B] flex items-center justify-center"><div class="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center play">▶</div></div>
+        <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/70 text-white text-[10px] uppercase">Macan Putih</div>
+        <div class="absolute bottom-3 right-3 px-2 py-1 rounded-[8px] bg-black/70 text-white text-[11px]">15:20</div>
+      </div>
+      <div class="p-5">
+        <h3 class="font-serif text-[15px] font-semibold leading-[1.35] group-hover:text-[var(--gold)] transition">Makam Mbah Slagah Pasuruan - Sang Penjaga Macan Putih</h3>
+        <div class="mt-3 flex items-center gap-3 text-[11px] text-[var(--text-muted)]"><span>👁 3.8k views</span><span>•</span><span>5 hari lalu</span></div>
+        <div class="mt-4 text-[12px] font-medium text-[var(--text-muted)] group-hover:text-[var(--text)] transition">Tonton sekarang ↗</div>
+      </div>
+    </a>
+    <!-- Card 3 -->
+    <a href="https://www.youtube.com/@mbchannel_radenmbeling9454" target="_blank" class="yt-card group min-w-[300px] lg:min-w-0 snap-start rounded-[20px] bg-[var(--card)] border overflow-hidden card-hover" style="border-color: var(--card-border);">
+      <div class="relative aspect-[16/10] overflow-hidden bg-[var(--bg-soft)]">
+        <div class="thumb absolute inset-0 bg-gradient-to-br from-[#1E1A2A] via-[#15151E] to-[#0A0A0B] flex items-center justify-center"><div class="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center play">▶</div></div>
+        <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/70 text-white text-[10px] uppercase">Wali</div>
+        <div class="absolute bottom-3 right-3 px-2 py-1 rounded-[8px] bg-black/70 text-white text-[11px]">10:05</div>
+      </div>
+      <div class="p-5">
+        <h3 class="font-serif text-[15px] font-semibold leading-[1.35] group-hover:text-[var(--gold)] transition">Makam Syekh Maulana Maghribi - Ayah Jaka Tarub</h3>
+        <div class="mt-3 flex items-center gap-3 text-[11px] text-[var(--text-muted)]"><span>👁 5.1k views</span><span>•</span><span>1 minggu lalu</span></div>
+        <div class="mt-4 text-[12px] font-medium text-[var(--text-muted)] group-hover:text-[var(--text)] transition">Tonton sekarang ↗</div>
+      </div>
+    </a>
+    <!-- Card 4 -->
+    <a href="https://www.youtube.com/@mbchannel_radenmbeling9454" target="_blank" class="yt-card group min-w-[300px] lg:min-w-0 snap-start rounded-[20px] bg-[var(--card)] border overflow-hidden card-hover hidden lg:block" style="border-color: var(--card-border);">
+      <div class="relative aspect-[16/10] overflow-hidden bg-[var(--bg-soft)]">
+        <div class="thumb absolute inset-0 bg-gradient-to-br from-[#2A1A0F] via-[#1F1510] to-[#0A0A0B] flex items-center justify-center"><div class="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center play">▶</div></div>
+        <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/70 text-white text-[10px] uppercase">Misteri</div>
+        <div class="absolute bottom-3 right-3 px-2 py-1 rounded-[8px] bg-black/70 text-white text-[11px]">18:33</div>
+      </div>
+      <div class="p-5">
+        <h3 class="font-serif text-[15px] font-semibold leading-[1.35] group-hover:text-[var(--gold)] transition">Misteri Makam Eyang Aji Saka - Lakarsantri Surabaya</h3>
+        <div class="mt-3 flex items-center gap-3 text-[11px] text-[var(--text-muted)]"><span>👁 2.9k views</span><span>•</span><span>2 minggu lalu</span></div>
+        <div class="mt-4 text-[12px] font-medium text-[var(--text-muted)] group-hover:text-[var(--text)] transition">Tonton sekarang ↗</div>
+      </div>
+    </a>
+    <!-- Card 5 -->
+    <a href="https://www.youtube.com/@mbchannel_radenmbeling9454" target="_blank" class="yt-card group min-w-[300px] lg:min-w-0 snap-start rounded-[20px] bg-[var(--card)] border overflow-hidden card-hover hidden lg:block" style="border-color: var(--card-border);">
+      <div class="relative aspect-[16/10] overflow-hidden bg-[var(--bg-soft)]">
+        <div class="thumb absolute inset-0 bg-gradient-to-br from-[#0F1F1F] via-[#101818] to-[#0A0A0B] flex items-center justify-center"><div class="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center play">▶</div></div>
+        <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/70 text-white text-[10px] uppercase">Babad</div>
+        <div class="absolute bottom-3 right-3 px-2 py-1 rounded-[8px] bg-black/70 text-white text-[11px]">22:10</div>
+      </div>
+      <div class="p-5">
+        <h3 class="font-serif text-[15px] font-semibold leading-[1.35] group-hover:text-[var(--gold)] transition">Babad Tanah Prambon - Asal Usul Desa Gedangrowo</h3>
+        <div class="mt-3 flex items-center gap-3 text-[11px] text-[var(--text-muted)]"><span>👁 1.7k views</span><span>•</span><span>3 minggu lalu</span></div>
+        <div class="mt-4 text-[12px] font-medium text-[var(--text-muted)] group-hover:text-[var(--text)] transition">Tonton sekarang ↗</div>
+      </div>
+    </a>
+    <!-- Card 6 -->
+    <a href="https://www.youtube.com/@mbchannel_radenmbeling9454" target="_blank" class="yt-card group min-w-[300px] lg:min-w-0 snap-start rounded-[20px] bg-[var(--card)] border overflow-hidden card-hover hidden lg:block" style="border-color: var(--card-border);">
+      <div class="relative aspect-[16/10] overflow-hidden bg-[var(--bg-soft)]">
+        <div class="thumb absolute inset-0 bg-gradient-to-br from-[#1F0F1A] via-[#18101A] to-[#0A0A0B] flex items-center justify-center"><div class="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center play">▶</div></div>
+        <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/70 text-white text-[10px] uppercase">Live Ziarah</div>
+        <div class="absolute bottom-3 right-3 px-2 py-1 rounded-[8px] bg-black/70 text-white text-[11px]">45:00</div>
+      </div>
+      <div class="p-5">
+        <h3 class="font-serif text-[15px] font-semibold leading-[1.35] group-hover:text-[var(--gold)] transition">Live Ziarah Malam Jumat Kliwon - Kumpulan Doa</h3>
+        <div class="mt-3 flex items-center gap-3 text-[11px] text-[var(--text-muted)]"><span>👁 892 views</span><span>•</span><span>Live</span></div>
+        <div class="mt-4 text-[12px] font-medium text-[var(--text-muted)] group-hover:text-[var(--text)] transition">Tonton sekarang ↗</div>
+      </div>
+    </a>
+  </div>
+
+  <div class="mt-8 lg:hidden text-center text-[12px] text-[var(--text-muted)]">← Geser untuk lihat video lain →</div>
+</section>
+
+<section id="lokasi" class="mx-auto max-w-[1280px] px-6 md:px-10 py-20 border-t" style="border-color: var(--border);">
+  <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-10">
+    <div class="reveal">
+      <div class="font-cinzel text-[11px] tracking-[0.2em] uppercase" style="color: var(--gold);">Lokasi Padepokan</div>
+      <h2 class="mt-3 font-serif text-[34px] md:text-[44px] leading-[0.95] font-bold">Sowan langsung, pintu selalu terbuka.</h2>
+      <div class="mt-8 rounded-[20px] bg-[var(--card)] border p-6 shadow-[var(--card-shadow)]" style="border-color: var(--card-border);">
+        <div class="flex gap-4">
+          <div class="w-10 h-10 rounded-[12px] flex items-center justify-center flex-shrink-0" style="background: rgba(201,168,106,0.12); border:1px solid rgba(201,168,106,0.2); color: var(--gold);">📍</div>
+          <div>
+            <div class="text-[13px] uppercase font-medium" style="color: var(--text-muted);">Alamat Lengkap</div>
+            <div class="mt-2 text-[15px] leading-[1.6] font-medium">Jalan Brawijaya No. 01, Dusun Gedangpulut, Desa Gedangrowo, RT/RW 01/01, Kecamatan Prambon, Kabupaten Sidoarjo, Jawa Timur 61264</div>
+            <div class="mt-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-medium" style="background: rgba(16,185,129,0.10); border:1px solid rgba(16,185,129,0.15); color: #10B981;">✓ Lokasi terverifikasi Google Maps</div>
+          </div>
+        </div>
+        <div class="mt-6 grid grid-cols-2 gap-3">
+          <div class="rounded-[14px] p-4" style="background: var(--bg); border:1px solid var(--border);"><div class="text-[11px] uppercase" style="color: var(--text-muted);">Jam Buka</div><div class="mt-2 text-[13px] font-medium">Setiap Hari<br><span style="color: var(--text-muted);" class="font-normal">08.00 - 21.00 WIB</span></div></div>
+          <div class="rounded-[14px] p-4" style="background: var(--bg); border:1px solid var(--border);"><div class="text-[11px] uppercase" style="color: var(--text-muted);">Konsultasi</div><div class="mt-2 text-[13px] font-medium">By Appointment<br><span style="color: var(--text-muted);" class="font-normal">Chat WA dulu</span></div></div>
+        </div>
+        <a href="https://maps.app.goo.gl/6sr8DqpPkG7nAzRv5" target="_blank" class="mt-6 h-11 rounded-full flex items-center justify-center gap-2 font-semibold text-[13px] hover:brightness-110 transition" style="background: var(--gold); color:#0A0A0B;">🧭 Buka di Google Maps</a>
       </div>
     </div>
-    <div class="rounded-[24px] overflow-hidden bg-[#151517] border border-white/[0.08] p-[1px]">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.5!2d112.55!3d-7.46!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMjgnMDcuMSJTIDExMsKwMzMnMjAuMCJF!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" class="w-full h-[520px] border-0" loading="lazy"></iframe>
+    <div class="reveal reveal-delay-1 rounded-[24px] overflow-hidden bg-[var(--card)] border p-[1px] shadow-[var(--card-shadow)]" style="border-color: var(--card-border);">
+      <div class="rounded-[23px] overflow-hidden bg-[var(--bg)]">
+        <iframe title="Peta Padepokan Raden Mbeling" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.5!2d112.55!3d-7.46!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMjgnMDcuMSJTIDExMsKwMzMnMjAuMCJF!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" class="w-full h-[520px] border-0" loading="lazy"></iframe>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="kontak" class="mx-auto max-w-[1280px] px-6 md:px-10 py-20 text-center">
-  <h2 class="font-serif-display text-[36px] md:text-[48px] font-bold">Seduluran selawase,<br><span class="gold-gradient italic">pintu selalu terbuka.</span></h2>
-  <div class="mt-10 max-w-[720px] mx-auto grid gap-3">
-    <a href="https://wa.me/6281554424198?text=Assalamualaikum%20Padepokan%20Raden%20Mbeling" target="_blank" class="rounded-[18px] bg-[#C9A86A] text-[#0A0A0B] p-4 flex items-center justify-between"><div class="flex items-center gap-4"><div class="w-11 h-11 rounded-full bg-[#0A0A0B] text-[#C9A86A] flex items-center justify-center">💬</div><div class="text-left"><div class="font-semibold">WhatsApp Padepokan</div><div class="text-[12px] opacity-70">+62 815-5442-4198 • 08.00-21.00</div></div></div>↗</a>
-    <div class="grid md:grid-cols-2 gap-3 text-left">
-      <a href="https://www.youtube.com/@mbchannel_radenmbeling9454" target="_blank" class="rounded-[16px] bg-[#151517] border border-white/[0.06] p-4 hover:border-white/[0.12] transition">▶ YouTube @mbchannel_radenmbeling9454<br><span class="text-[11px] text-white/40">2.06rb subscriber • 150 video</span></a>
-      <a href="https://www.instagram.com/radenmbeling" target="_blank" class="rounded-[16px] bg-[#151517] border border-white/[0.06] p-4 hover:border-white/[0.12] transition">📷 Instagram @radenmbeling<br><span class="text-[11px] text-white/40">Behind the scene & kisah harian</span></a>
+<section id="kontak" class="mx-auto max-w-[1280px] px-6 md:px-10 py-20">
+  <div class="max-w-[720px] mx-auto text-center reveal">
+    <div class="font-cinzel text-[11px] tracking-[0.2em] uppercase" style="color: var(--gold);">Hubungi Kami</div>
+    <h2 class="mt-3 font-serif text-[36px] md:text-[48px] font-bold leading-[0.95]">Seduluran selawase,<br><span class="gold-gradient italic">pintu selalu terbuka.</span></h2>
+  </div>
+  <div class="mt-12 max-w-[720px] mx-auto grid gap-3 reveal reveal-delay-1">
+    <a href="https://wa.me/6281554424198?text=Assalamualaikum%20Padepokan%20Raden%20Mbeling" target="_blank" class="rounded-[18px] p-[1px] overflow-hidden card-hover" style="background: var(--gold);">
+      <div class="rounded-[17px] px-6 py-4 flex items-center justify-between" style="background: var(--gold);">
+        <div class="flex items-center gap-4"><div class="w-11 h-11 rounded-full bg-[#0A0A0B] text-[#C9A86A] flex items-center justify-center">💬</div><div class="text-left"><div class="font-semibold text-[15px] text-[#0A0A0B]">WhatsApp Padepokan</div><div class="text-[12px] text-[#0A0A0B]/70">+62 815-5442-4198 • Respon cepat 08.00-21.00</div></div></div><span class="text-[#0A0A0B]">↗</span>
+      </div>
+    </a>
+    <div class="grid md:grid-cols-2 gap-3">
+      <a href="https://www.youtube.com/@mbchannel_radenmbeling9454" target="_blank" class="rounded-[16px] bg-[var(--card)] border px-5 py-4 flex items-center gap-4 card-hover" style="border-color: var(--card-border);"><div class="w-10 h-10 rounded-full flex items-center justify-center" style="background: var(--bg); border:1px solid var(--border);">▶</div><div><div class="font-semibold text-[14px]">YouTube</div><div class="text-[12px] text-[var(--text-muted)]">@mbchannel_radenmbeling9454</div><div class="text-[11px] text-[var(--text-faint)] mt-0.5">2.06rb subscriber • 150 video</div></div></a>
+      <a href="https://www.instagram.com/radenmbeling" target="_blank" class="rounded-[16px] bg-[var(--card)] border px-5 py-4 flex items-center gap-4 card-hover" style="border-color: var(--card-border);"><div class="w-10 h-10 rounded-full flex items-center justify-center" style="background: var(--bg); border:1px solid var(--border);">📷</div><div><div class="font-semibold text-[14px]">Instagram</div><div class="text-[12px] text-[var(--text-muted)]">@radenmbeling</div><div class="text-[11px] text-[var(--text-faint)] mt-0.5">Kisah harian & behind the scene</div></div></a>
     </div>
   </div>
 </section>
 
-<footer class="border-t border-white/[0.06] bg-[#0A0A0B] py-10">
+<footer class="border-t py-10" style="border-color: var(--border); background: var(--bg-soft);">
   <div class="mx-auto max-w-[1280px] px-6 md:px-10 flex flex-col md:flex-row justify-between gap-6">
-    <div class="flex items-center gap-3"><div class="w-9 h-9 rounded-[10px] bg-gradient-to-br from-[#C9A86A] to-[#8C6B3D] flex items-center justify-center font-bold text-[#0A0A0B]">RM</div><div><div class="font-semibold text-[14px]">Padepokan Raden Mbeling</div><div class="text-[11px] text-white/40">© 2026 • Agomo Diterimo, Jowo Digowo</div></div></div>
-    <div class="text-[11px] text-white/40">Jalan Brawijaya No.01, Gedangpulut, Gedangrowo, Prambon Sidoarjo 61264 • KEBENARAN HANYA MILIK ALLAH SWT</div>
+    <div class="flex items-center gap-3"><div class="w-9 h-9 rounded-[10px] flex items-center justify-center font-cinzel font-bold text-[14px] text-[#0A0A0B]" style="background: var(--gold-gradient);">RM</div><div><div class="font-serif font-semibold text-[14px]">Padepokan Raden Mbeling</div><div class="text-[11px] text-[var(--text-muted)]">© 2026 • Agomo Diterimo, Jowo Digowo</div></div></div>
+    <div class="text-[11px] text-[var(--text-muted)] max-w-[500px] text-left md:text-right">Jalan Brawijaya No. 01, Dusun Gedangpulut, Desa Gedangrowo, RT/RW 01/01, Kec. Prambon, Kab. Sidoarjo 61264 • KEBENARAN HANYA MILIK ALLAH SWT</div>
   </div>
 </footer>
 
-<a href="https://wa.me/6281554424198?text=Assalamualaikum%20Padepokan%20Raden%20Mbeling" target="_blank" class="fixed bottom-6 right-6 z-[110] w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-[0_12px_32px_rgba(37,211,102,0.35)]">💬</a>
+<a href="https://wa.me/6281554424198?text=Assalamualaikum%20Padepokan%20Raden%20Mbeling" target="_blank" class="fixed bottom-6 right-6 z-[110] w-14 h-14 rounded-full flex items-center justify-center shadow-[0_12px_32px_rgba(37,211,102,0.35)] hover:scale-105 transition" style="background:#25D366; color:white;">💬</a>
 
 <script src="script.js"></script>
-</body>
+<script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}function isInlineMediaSlotElement(node){return !!(node&&node.getAttribute&&node.getAttribute("data-clippy-inline-media-slot")!==null)}function findInlineMediaSlot(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(isInlineMediaSlotElement(node))return node}return null}function readInlineMediaUrl(node){if(!node)return null;return node.getAttribute&&((node.getAttribute("data-clippy-inline-media-url")||node.getAttribute("data-url")||node.getAttribute("data_url")))||node.href||null}function stripHash(url){return String(url).replace(/#.*$/,"")}function urlsMatch(a,b){if(!a||!b)return false;try{return stripHash(new URL(a,loc).href)===stripHash(new URL(b,loc).href)}catch(_){return stripHash(a)===stripHash(b)}}function isFirstPartyReelUrl(value){try{var url=new URL(value,loc);if(url.protocol!=="https:")return false;var host=url.hostname.toLowerCase();var supported=host==="instagram.com"||host.endsWith(".instagram.com")||host==="facebook.com"||host.endsWith(".facebook.com");return supported&&/\/reels?\//i.test(url.pathname)}catch(_){return false}}function isInlineMediaUrlClick(node,href){var slot=findInlineMediaSlot(node);if(!slot)return false;var slotUrl=readInlineMediaUrl(slot);if(slotUrl)return urlsMatch(href,slotUrl);return isFirstPartyReelUrl(href)}function findDataHref(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(node.getAttribute){var href=node.getAttribute("data-href")||node.getAttribute("data-url");if(href)return{href:href,node:node}}}return null}var nativeOpen=window.open;window.open=function(url){if(parent!==window&&typeof url==="string"&&/^https?:\/\//.test(url)){parent.postMessage({type:"ecto:usercontent-link-click",href:url},"*");return null}return nativeOpen?nativeOpen.apply(window,arguments):null};document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;if(parent===window)return;var a=target.closest?target.closest("a[href]"):null;if(a&&a.href&&/^https?:\/\//.test(a.href)&&a.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(a,a.href))return;var productId=extractProductId(target)||extractProductId(a);if(productId){e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*");return}e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:a.href},"*");return}var dataHref=findDataHref(target);if(dataHref&&/^https?:\/\//.test(dataHref.href)&&dataHref.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(dataHref.node,dataHref.href))return;e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:dataHref.href},"*")}},true)})();</script><script>(function(){var FOCUS_TYPE="ecto:artifact-focus-request";var CLOSE_TYPE="ecto:artifact-close-request";function focusArtifactDocument(){var body=document.body;if(!body)return;try{window.focus();}catch(e){}if(!body.hasAttribute("tabindex"))body.setAttribute("tabindex","-1");try{body.focus({preventScroll:true});}catch(e){try{body.focus();}catch(e2){}}}window.addEventListener("message",function(event){if(event.source!==window.parent)return;var data=event.data;if(!data||typeof data!=="object"||data.type!==FOCUS_TYPE)return;if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",focusArtifactDocument,{once:true});return;}focusArtifactDocument();});window.addEventListener("keydown",function(event){if(event.key!=="Escape")return;window.setTimeout(function(){if(event.defaultPrevented)return;window.parent.postMessage({type:CLOSE_TYPE},"*");},0);});})();</script></body>
 </html>
